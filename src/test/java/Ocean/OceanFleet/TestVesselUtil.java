@@ -7,9 +7,9 @@ public class TestVesselUtil {
 
     @Test
     public void testUtil(){
-        VesselUtil vesselUtil = new VesselUtil();
+        AddVessel addVessel = new AddVessel();
 
-        Vessel vessel = vesselUtil.addVessel(101,"vessel1",35.0,"cube");
+        Vessel vessel = addVessel.addVessel(101,"vessel1",35.0,"cube");
 
         assertEquals(101,vessel.getVessel_id());
         assertEquals("vessel1",vessel.getName());

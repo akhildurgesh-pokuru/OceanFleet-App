@@ -7,36 +7,59 @@ import java.util.Scanner;
 
 public class VesselUtil {
 
-    List<Vessel> vessels = new ArrayList<>();
+    static Scanner sc = new Scanner(System.in);
+
+    static List<Vessel> vessels = new ArrayList<>();
 
     public static void main(String[] args) {
         VesselUtil vesselUtil = new VesselUtil();
 
-        Scanner sc = new Scanner(System.in);
+        int choice = 1;
 
-        System.out.println("Enter Vessel ID: ");
-        int id = sc.nextInt();
+        while(choice!=0){
 
-        System.out.println("Enter Vessel Name: ");
-        String name = sc.next();
+            System.out.println("1.Add Vessel");
+            System.out.println("2. get Vessel by id");
+            System.out.println("Enter you choice");
+            choice = sc.nextInt();
 
-        System.out.println("Enter the Average Speed: ");
-        double speed = sc.nextDouble();
+            switch (choice){
 
-        System.out.println("Enter the Vessel Type");
-        String type = sc.next();
+                case 1 :
 
+                    AddVessel addVessel = new AddVessel();
+                    System.out.println("Enter Vessel ID: ");
+                    int id = sc.nextInt();
 
-        vesselUtil.addVessel(id, name, speed, type);
-    }
+                    System.out.println("Enter Vessel Name: ");
+                    String name = sc.next();
 
-    public Vessel addVessel(int id, String name, double speed, String type){
+                    System.out.println("Enter the Average Speed: ");
+                    double speed = sc.nextDouble();
 
-        Vessel vessel = new Vessel(id, name, speed, type);
+                    System.out.println("Enter the Vessel Type");
+                    String type = sc.next();
+                    addVessel.addVessel(id, name, speed, type);
+                    break;
 
-        vessels.add(vessel);
+                case 2 :
 
-        return vessel;
+                    GetVesselByID getVesselByID = new GetVesselByID();
+                    System.out.println("Enter the Vessel ID: ");
+                    int vessle_id = sc.nextInt();
+                    getVesselByID.getVesselById(vessle_id);
+                    break;
+
+                default:
+
+                    System.out.println("Enter valid Choice");
+                    break;
+            }
+
+            System.out.println("Enter your choice to continue: ");
+            choice = sc.nextInt();
+        }
+
     }
 }
 
