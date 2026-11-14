@@ -1,7 +1,7 @@
 package Ocean.OceanFleet;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestVessel {
@@ -11,17 +11,17 @@ public class TestVessel {
         Vessel vessel = new Vessel();
         assertEquals(0,vessel.getVessel_id());
         assertEquals(null,vessel.getName());
-        assertEquals(0.0,vessel.average_speed);
+        assertEquals(0.0,vessel.getAverage_speed());
         assertEquals(null,vessel.getVessel_type());
     }
 
     @Test
     public void TestParameterConstructor(){
         Vessel vessel = new Vessel(101,"Vessel1",34.0,"cube");
-        assertEquals(101,vessel.vessel_id);
-        assertEquals("Vessel1",vessel.name);
-        assertEquals(34.0,vessel.average_speed);
-        assertEquals("cube",vessel.vessel_type);
+        assertEquals(101,vessel.getVessel_id());
+        assertEquals("Vessel1",vessel.getName());
+        assertEquals(34.0,vessel.getAverage_speed());
+        assertEquals("cube",vessel.getVessel_type());
     }
 
     @Test
