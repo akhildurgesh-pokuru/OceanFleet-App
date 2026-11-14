@@ -21,6 +21,7 @@ public class VesselUtil {
             System.out.println("1. Add Vessel");
             System.out.println("2. get Vessel by id");
             System.out.println("3. Find Highest Vessel Speed");
+            System.out.println("4. Get Vessels");
             System.out.println("Enter you choice");
             choice = sc.nextInt();
 
@@ -56,6 +57,11 @@ public class VesselUtil {
                     HighestAverageSpeed highestAverageSpeed = new HighestAverageSpeed();
                     highestAverageSpeed.highestAverageSpeed();
                     break;
+
+                case 4 :
+
+                    GetAllVessels getAllVessels = new GetAllVessels();
+                    getAllVessels.allvessels();
 
 
 
