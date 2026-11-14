@@ -18,8 +18,9 @@ public class VesselUtil {
 
         while(choice!=0){
 
-            System.out.println("1.Add Vessel");
+            System.out.println("1. Add Vessel");
             System.out.println("2. get Vessel by id");
+            System.out.println("3. Find Highest Vessel Speed");
             System.out.println("Enter you choice");
             choice = sc.nextInt();
 
@@ -49,6 +50,14 @@ public class VesselUtil {
                     int vessle_id = sc.nextInt();
                     getVesselByID.getVesselById(vessle_id);
                     break;
+
+                case 3 :
+
+                    HighestAverageSpeed highestAverageSpeed = new HighestAverageSpeed();
+                    highestAverageSpeed.highestAverageSpeed();
+                    break;
+
+
 
                 default:
 
