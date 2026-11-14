@@ -2,13 +2,13 @@ package Ocean.OceanFleet;
 
 public class Vessel {
 
-    int vessel_id;
+    private int vessel_id;
 
-    String name;
+    private String name;
 
-    double average_speed;
+    private double average_speed;
 
-    String vessel_type;
+    private String vessel_type;
 
     public Vessel(int vessel_id, String name, double average_speed, String vessel_type) {
         this.vessel_id = vessel_id;
